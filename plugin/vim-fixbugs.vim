@@ -1,3 +1,8 @@
+if exists('g:loaded_fixbugs') || &cp
+    finish
+endif
+let g:loaded_fixbugs = 1
+
 " Marks don't get deleted persistently when exiting vim
 "
 " See: https://groups.yahoo.com/neo/groups/vimdev/conversations/topics/68117
