@@ -14,3 +14,7 @@ au VimLeavePre * wviminfo!
 " See: http://vim.wikia.com/wiki/Editing_crontab
 
 autocmd BufEnter /private/tmp/crontab.* setlocal backupcopy=yes
+
+" Comment string is not set correctly in crontabs
+
+autocmd FileType crontab setlocal commentstring=#\ %s
