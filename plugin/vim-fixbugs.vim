@@ -1,20 +1,22 @@
-if exists('g:loaded_fixbugs') || &cp
+if exists('g:loaded_fixbugs') || &compatible
     finish
 endif
 let g:loaded_fixbugs = 1
 
-" Marks don't get deleted persistently when exiting vim
-"
-" See: https://groups.yahoo.com/neo/groups/vimdev/conversations/topics/68117
+augroup fixbugs_init
+    " Marks don't get deleted persistently when exiting vim
+    "
+    " See: https://groups.yahoo.com/neo/groups/vimdev/conversations/topics/68117
 
-au VimLeavePre * wviminfo!
+    autocmd VimLeavePre * wviminfo!
 
-" Bug on OS X with crontab -e
-"
-" See: http://vim.wikia.com/wiki/Editing_crontab
+    " Bug on OS X with crontab -e
+    "
+    " See: http://vim.wikia.com/wiki/Editing_crontab
 
-autocmd BufEnter /private/tmp/crontab.* setlocal backupcopy=yes
+    autocmd BufEnter /private/tmp/crontab.* setlocal backupcopy=yes
 
-" Comment string is not set correctly in crontabs
+    " Comment string is not set correctly in crontabs
 
-autocmd FileType crontab setlocal commentstring=#\ %s
+    autocmd FileType crontab setlocal commentstring=#\ %s
+augroup END
