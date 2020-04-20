@@ -5,8 +5,6 @@ let g:loaded_fixbugs = 1
 
 augroup fixbugs_init
     " Marks don't get deleted persistently when exiting vim
-    "
-    " See: https://groups.yahoo.com/neo/groups/vimdev/conversations/topics/68117
 
     autocmd VimLeavePre * wviminfo!
 
