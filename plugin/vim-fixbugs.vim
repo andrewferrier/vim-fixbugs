@@ -16,5 +16,8 @@ augroup fixbugs_init
 
     " Comment string is not set correctly in crontabs
 
+    " See https://github.com/neovim/neovim/pull/13066 for pull request to fix in
+    " Neovim.
+
     autocmd FileType crontab setlocal commentstring=#\ %s
 augroup END
