@@ -1,4 +1,6 @@
-## vim-fixbugs
+# vim-fixbugs
+
+**Deprecated:** I have stopped work on this plugin, it is not longer maintained.
 
 Plugin to fix some common bugs or shortcomings in vim or the way vim is set up
 on various systems. In particular, it addresses:
